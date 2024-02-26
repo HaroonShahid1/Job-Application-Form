@@ -6,7 +6,7 @@ This project aims to create a comprehensive job application form using HTML, CSS
 
 ## Files
 
-- `index.html`: The main HTML file that structures the job application form.
+- `jobapp.html`: The main HTML file that structures the job application form.
 - `jobapp.css`: The CSS file responsible for styling the form and creating a visually appealing user interface.
 - `jobapp.js`: The JavaScript file that contains logic for form validation, data handling, and the transformation of submitted data into a table.
 
