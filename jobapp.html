@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Github Link: https://github.com/HaroonShahid1/Job-Application-Form -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Application Form</title>
@@ -15,7 +17,7 @@
       <h2>Job Application Form</h2>
 
         <!-- Personal Information -->
-
+        <h1 class="headings">Personal Information</h1>
         <div class="form-row">
           <label for="FirstName">First Name:</label>
           <input type="text" id="FirstName" name="FirstName" required>
@@ -25,7 +27,6 @@
   
           <label for="EmailAddress">Email Address:</label>
           <input type="email" id="EmailAddress" name="EmailAddress" required>
-  
         </div>
 
         <div class="form-row">
@@ -47,7 +48,7 @@
           <input type="text" id="State" name="State" required>
   
           <label for="Resume">Upload Resume:</label>
-          <input type="file" id="Resume" name="Resume">
+          <input type="file" id="Resume" name="Resume" required>
         </div>
 
         <div class="form-row">
@@ -61,7 +62,13 @@
 
         <div class="form-row">
           <label for="EducationLevel">Highest Education Level:</label>
-          <input type="text" id="EducationLevel" name="EducationLevel" required>
+          <select id="EducationLevel" name="EducationLevel" required>
+              <option value="HighSchool">High School</option>
+              <option value="Associates">Associates Degree</option>
+              <option value="Bachelors">Bachelor's Degree</option>
+              <option value="Masters">Master's Degree</option>
+              <option value="PhD">PhD</option>
+          </select>
   
           <label for="SchoolName">Name of School/University:</label>
           <input type="text" id="SchoolName" name="SchoolName" required>
@@ -72,7 +79,7 @@
           <input type="text" id="Major" name="Major" required>
   
           <label for="GraduationYear">Graduation Year:</label>
-          <input type="text" id="GraduationYear" name="GraduationYear" required>
+          <input type="year" id="GraduationYear" name="GraduationYear" required>          
         </div>
 
         <!-- Employment History -->
@@ -80,19 +87,28 @@
         <h1 class="headings">Employment History</h1>
 
         <div class="form-row">
-          <label for="CompanyName">Company Name:</label>
-          <input type="text" id="CompanyName" name="CompanyName">
-  
-          <label for="JobTitle">Job Title:</label>
-          <input type="text" id="JobTitle" name="JobTitle">
+            <label for="CompanyName">Company Name:</label>
+            <input type="text" id="CompanyName" name="CompanyName">
+
+            <label for="JobTitle">Job Title:</label>
+            <input type="text" id="JobTitle" name="JobTitle">
         </div>
 
         <div class="form-row">
-          <label for="StartDate">Start Date:</label>
-          <input type="date" id="StartDate" name="StartDate" required>
-  
-          <label for="EndDate">End Date:</label>
-          <input type="date" id="EndDate" name="EndDate" required>
+            <label for="StartDate">Start Date:</label>
+            <input type="date" id="StartDate" name="StartDate">
+
+            <label for="EndDate">End Date:</label>
+            <input type="date" id="EndDate" name="EndDate">
+        </div>
+
+        <div class="form-row">
+            <label for="EmploymentStatus">Employment Status:</label>
+            <select id="EmploymentStatus" name="EmploymentStatus" required>
+                <option value="Employed">Employed</option>
+                <option value="Unemployed">Unemployed</option>
+                <option value="NoHistory">No Employment History</option>
+            </select>
         </div>
 
         <!-- Previous Job Titles -->
@@ -100,19 +116,19 @@
         <h1 class="headings">Previous Job Information</h1>
 
         <div class="form-row">
-          <label for="PreviousJobTitles">Previous Job Titles:</label>
-          <input type="text" id="PreviousJobTitles" name="PreviousJobTitles" required>
+          <label for="PreviousJobTitles">Previous Job Title:</label>
+          <input type="text" id="PreviousJobTitles" name="PreviousJobTitles">
   
-          <label for="CompanyNames">Company Names:</label>
-          <input type="text" id="CompanyNames" name="CompanyNames" required>
+          <label for="CompanyNames">Company Name:</label>
+          <input type="text" id="CompanyNames" name="CompanyNames">
         </div>
 
         <div class="form-row">
           <label for="EmploymentStartDate">Employment Start Date:</label>
-          <input type="date" id="EmploymentStartDate" name="EmploymentStartDate" required>
+          <input type="date" id="EmploymentStartDate" name="EmploymentStartDate">
 
           <label for="EmploymentEndDate">Employment End Date:</label>
-          <input type="date" id="EmploymentEndDate" name="EmploymentEndDate" required>
+          <input type="date" id="EmploymentEndDate" name="EmploymentEndDate">
         </div>
 
         <div class="form-row">
@@ -120,15 +136,54 @@
           <textarea id="JobResponsibilities" name="JobResponsibilities" rows="4" cols="50"></textarea>
         </div>
 
-        <!-- Skills -->
+        <div class="form-row">
+          <label for="PreviousJobStatus">Previous Job Status:</label>
+          <select id="PreviousJobStatus" name="PreviousJobStatus" required>
+              <option value="Current">Current Job</option>
+              <option value="Previous">Previous Job</option>
+              <option value="NoPreviousJob">No Previous Job</option>
+          </select>
+        </div>
+
+        <!-- Skills & Certifications-->
         <h1 class="headings">Skills & Certifications</h1>
 
         <div class="form-row">
-          <label for="RelevantSkills">Relevant Skills:</label>
-          <input type="text" id="RelevantSkills" name="RelevantSkills" required>
-  
-          <label for="Certifications">Certifications:</label>
+          <label for="RelevantSkills">Relevant Skill 1:</label>
+          <input type="text" id="RelevantSkills" name="RelevantSkills">
+
+          <label for="RelevantSkills">Relevant Skill 2:</label>
+          <input type="text" id="RelevantSkills" name="RelevantSkills">
+
+          <label for="RelevantSkills">Relevant Skill 3:</label>
+          <input type="text" id="RelevantSkills" name="RelevantSkills">
+        </div>
+
+        <div class="form-row">
+          <label for="SkillStatus">Skills Status:</label>
+          <select id="SkillStatus" name="SkillStatus" required>
+              <option value="Current">Current Skills Inputed Above</option>
+              <option value="No">No Skills Yet</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="Certifications">Certification 1:</label>
           <input type="text" id="Certifications" name="Certifications">
+
+          <label for="Certifications">Certification 2:</label>
+          <input type="text" id="Certifications" name="Certifications">
+
+          <label for="Certifications">Certification 3:</label>
+          <input type="text" id="Certifications" name="Certifications">
+        </div>
+
+        <div class="form-row">
+          <label for="CertificationStatus">Certifications Status:</label>
+          <select id="CertificationStatus" name="CertificationStatus" required>
+              <option value="Current">Current Certifications Inputed Above</option>
+              <option value="No">No Certifications Yet</option>
+          </select>
         </div>
 
         <!-- Availability Information -->
@@ -136,43 +191,53 @@
         <div class="form-row">
           <label for="StartDate">Start Date:</label>
           <input type="date" id="StartDate" name="StartDate" required>
-  
+          
           <label for="PreferredWorkSchedule">Preferred Work Schedule:</label>
-          <input type="text" id="PreferredWorkSchedule" name="PreferredWorkSchedule">
+          <select id="PreferredWorkSchedule" name="PreferredWorkSchedule">
+            <option value="FullTime">Full Time</option>
+            <option value="PartTime">Part Time</option>
+            <option value="Flexible">Flexible</option>
+          </select>
         </div>
-
+        
         <div class="form-row">
           <label for="WillingnessToRelocate">Willingness to Relocate:</label>
           <select id="WillingnessToRelocate" name="WillingnessToRelocate">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
+            <option value="WithinCountry">Open to Relocating within the Country</option>
+            <option value="International">Open to International Relocation</option>
+            <option value="No">Not Willing to Relocate</option>
           </select>
-        </div>
+        </div>        
 
         <!-- References Information -->
-
         <h1 class="headings">References</h1>
 
         <div class="form-row">
-          <label for="ReferenceName">Reference Name:</label>
-          <input type="text" id="ReferenceName" name="ReferenceName" required>
-  
-          <label for="ReferenceContact">Reference Contact :</label>
-          <input type="text" id="ReferenceContact" name="ReferenceContact" required>
+          <label for="ReferenceName">Full Name of Reference:</label>
+          <input type="text" id="ReferenceName" name="ReferenceName" placeholder="e.g., John Doe" required>
+          
+          <label for="ReferenceContact">Contact of Reference:</label>
+          <input type="tel" id="ReferenceContact" name="ReferenceContact" placeholder="e.g., (555) 123-4567" required>
         </div>
 
         <div class="form-row">
           <label for="RelationshipToApplicant">Relationship to Applicant:</label>
-          <input type="text" id="RelationshipToApplicant" name="RelationshipToApplicant" required>
+          <select id="RelationshipToApplicant" name="RelationshipToApplicant" required>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Colleague">Colleague</option>
+            <option value="Friend">Friend</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
 
-        <!-- Additional Questions -->
 
+        <!-- Additional Questions -->
         <h1 class="headings">Additional Questions</h1>
         <div class="form-row">
           <label for="WhyWorkForCompany">Why do you want to work for this company?</label>
-          <textarea id="WhyWorkForCompany" name="WhyWorkForCompany" rows="4" cols="50"></textarea>
+          <textarea id="WhyWorkForCompany" name="WhyWorkForCompany" rows="6" cols="60" placeholder="Share your motivation and enthusiasm for joining our company."></textarea>
         </div>
+
 
 
         <!-- Consent and Agreement -->
