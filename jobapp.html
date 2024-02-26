@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="jobapp.css">
+  <script src="jobapp.js"></script>
+  
+</head>
+<body>
+
+  <div class="container">
+    <form id="jobApplicationForm" onsubmit="validateForm(); return false;">
+      <h2>Job Application Form</h2>
+
+        <!-- Personal Information -->
+
+        <div class="form-row">
+          <label for="FirstName">First Name:</label>
+          <input type="text" id="FirstName" name="FirstName" required>
+  
+          <label for="LastName">Last Name:</label>
+          <input type="text" id="LastName" name="LastName" required>
+  
+          <label for="EmailAddress">Email Address:</label>
+          <input type="email" id="EmailAddress" name="EmailAddress" required>
+  
+        </div>
+
+        <div class="form-row">
+          <label for="PhoneNumber">Phone Number:</label>
+          <input type="tel" id="PhoneNumber" name="PhoneNumber" required>
+  
+          <label for="City">City:</label>
+          <input type="text" id="City" name="City" required>
+          
+          <label for="ZipCode">Zip Code:</label>
+          <input type="text" id="ZipCode" name="ZipCode" required>
+        </div>
+
+        <div class="form-row">
+          <label for="Street">Street:</label>
+          <input type="text" id="Street" name="Street" required>
+  
+          <label for="State">State:</label>
+          <input type="text" id="State" name="State" required>
+  
+          <label for="Resume">Upload Resume:</label>
+          <input type="file" id="Resume" name="Resume">
+        </div>
+
+        <div class="form-row">
+          <label for="CoverLetter">Cover Letter:</label>
+          <textarea id="CoverLetter" name="CoverLetter" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Education -->
+
+        <h1 class="headings">Education</h1>
+
+        <div class="form-row">
+          <label for="EducationLevel">Highest Education Level:</label>
+          <input type="text" id="EducationLevel" name="EducationLevel" required>
+  
+          <label for="SchoolName">Name of School/University:</label>
+          <input type="text" id="SchoolName" name="SchoolName" required>
+        </div>
+
+        <div class="form-row">
+          <label for="Major">Major/Area of Study:</label>
+          <input type="text" id="Major" name="Major" required>
+  
+          <label for="GraduationYear">Graduation Year:</label>
+          <input type="text" id="GraduationYear" name="GraduationYear" required>
+        </div>
+
+        <!-- Employment History -->
+
+        <h1 class="headings">Employment History</h1>
+
+        <div class="form-row">
+          <label for="CompanyName">Company Name:</label>
+          <input type="text" id="CompanyName" name="CompanyName">
+  
+          <label for="JobTitle">Job Title:</label>
+          <input type="text" id="JobTitle" name="JobTitle">
+        </div>
+
+        <div class="form-row">
+          <label for="StartDate">Start Date:</label>
+          <input type="date" id="StartDate" name="StartDate" required>
+  
+          <label for="EndDate">End Date:</label>
+          <input type="date" id="EndDate" name="EndDate" required>
+        </div>
+
+        <!-- Previous Job Titles -->
+
+        <h1 class="headings">Previous Job Information</h1>
+
+        <div class="form-row">
+          <label for="PreviousJobTitles">Previous Job Titles:</label>
+          <input type="text" id="PreviousJobTitles" name="PreviousJobTitles" required>
+  
+          <label for="CompanyNames">Company Names:</label>
+          <input type="text" id="CompanyNames" name="CompanyNames" required>
+        </div>
+
+        <div class="form-row">
+          <label for="EmploymentStartDate">Employment Start Date:</label>
+          <input type="date" id="EmploymentStartDate" name="EmploymentStartDate" required>
+
+          <label for="EmploymentEndDate">Employment End Date:</label>
+          <input type="date" id="EmploymentEndDate" name="EmploymentEndDate" required>
+        </div>
+
+        <div class="form-row">
+          <label for="JobResponsibilities">Job Responsibilities:</label>
+          <textarea id="JobResponsibilities" name="JobResponsibilities" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Skills -->
+        <h1 class="headings">Skills & Certifications</h1>
+
+        <div class="form-row">
+          <label for="RelevantSkills">Relevant Skills:</label>
+          <input type="text" id="RelevantSkills" name="RelevantSkills" required>
+  
+          <label for="Certifications">Certifications:</label>
+          <input type="text" id="Certifications" name="Certifications">
+        </div>
+
+        <!-- Availability Information -->
+        <h1 class="headings">Availability</h1>
+        <div class="form-row">
+          <label for="StartDate">Start Date:</label>
+          <input type="date" id="StartDate" name="StartDate" required>
+  
+          <label for="PreferredWorkSchedule">Preferred Work Schedule:</label>
+          <input type="text" id="PreferredWorkSchedule" name="PreferredWorkSchedule">
+        </div>
+
+        <div class="form-row">
+          <label for="WillingnessToRelocate">Willingness to Relocate:</label>
+          <select id="WillingnessToRelocate" name="WillingnessToRelocate">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <!-- References Information -->
+
+        <h1 class="headings">References</h1>
+
+        <div class="form-row">
+          <label for="ReferenceName">Reference Name:</label>
+          <input type="text" id="ReferenceName" name="ReferenceName" required>
+  
+          <label for="ReferenceContact">Reference Contact :</label>
+          <input type="text" id="ReferenceContact" name="ReferenceContact" required>
+        </div>
+
+        <div class="form-row">
+          <label for="RelationshipToApplicant">Relationship to Applicant:</label>
+          <input type="text" id="RelationshipToApplicant" name="RelationshipToApplicant" required>
+        </div>
+
+        <!-- Additional Questions -->
+
+        <h1 class="headings">Additional Questions</h1>
+        <div class="form-row">
+          <label for="WhyWorkForCompany">Why do you want to work for this company?</label>
+          <textarea id="WhyWorkForCompany" name="WhyWorkForCompany" rows="4" cols="50"></textarea>
+        </div>
+
+
+        <!-- Consent and Agreement -->
+        <h1 class="headings">Consent and Agreement</h1>
+
+        <div class="form-row">
+          <label for="AgreeToTerms">I agree to the terms and conditions:</label>
+          <input type="checkbox" id="AgreeToTerms" name="AgreeToTerms" required>
+        </div>
+
+        <div class="form-row">
+          <label for="PrivacyPolicyAcknowledgment">I acknowledge the privacy policy:</label>
+          <input type="checkbox" id="PrivacyPolicyAcknowledgment" name="PrivacyPolicyAcknowledgment" required>
+        </div>
+
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <button onclick="transformData()" class="table_button">Transform Data Into Table</button>
+
+    <div id="tableContainer"></div>
+  </div>
+
+</body>
+</html>
