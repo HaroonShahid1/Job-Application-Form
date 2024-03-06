@@ -21,28 +21,26 @@
  }
 
  function transformData() {
-   var tableContainer = document.getElementById('tableContainer');
-   var tableHTML = '<table><tr><th>Application</th>';
+  var tableContainer = document.getElementById('tableContainer');
+  var headers = Object.keys(submittedApplications[0]); // Extract headers
+  var tableHTML = '<table>';
 
-   // Extract headers from the first application
-   var firstApplication = submittedApplications[0];
-   Object.keys(firstApplication).forEach(function(key){
-     tableHTML += '<th>' + key + '</th>';
-   });
+  // Loop through each header/field
+  headers.forEach(function(header) {
+    tableHTML += '<tr><th>' + header + '</th>';
 
-   tableHTML += '</tr>';
+    // Loop through each application and add the data for the current field
+    submittedApplications.forEach(function(application) {
+      tableHTML += '<td>' + application[header] + '</td>';
+    });
 
-   // Loop through all submitted applications
-   submittedApplications.forEach(function(formData, index){
-     tableHTML += '<tr><td>' + (index + 1) + '</td>';
+    tableHTML += '</tr>';
+  });
 
-     Object.values(formData).forEach(function(value){
-       tableHTML += '<td>' + value + '</td>';
-     });
+  tableHTML += '</table>';
+  tableContainer.innerHTML = tableHTML;
+}
 
-     tableHTML += '</tr>';
-   });
 
-   tableHTML += '</table>';
-   tableContainer.innerHTML = tableHTML;
- }
+ //Reference
+ //Taking Help from ChatGPT (https://chat.openai.com/)
